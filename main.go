@@ -4,7 +4,6 @@ package main // Package declaration which is the main package
 
 import (
 	"fmt" // Importing the fmt package which is used for printing to the console it stands for format
-	"sort"
 )
 
 // Main function
@@ -67,10 +66,23 @@ func main() {
 	// fmt.Println(strings.ToUpper(greeting))                                 //returns new string
 	// fmt.Println(strings.Index(greeting, "0"))                              //return -1 if the substring does not exist
 	// fmt.Println(strings.Split(greeting, " "))
-	numbers := []int{23, 32, 56, 1, 2, 100}
-	sort.Ints(numbers)
-	fmt.Println(numbers)
-	index := sort.SearchInts(numbers, 203)
-	println(index)
-
+	// numbers := []int{23, 32, 56, 1, 2, 100}
+	// sort.Ints(numbers)
+	// fmt.Println(numbers)
+	// index := sort.SearchInts(numbers, 203) //index > len int doesnot exist
+	// println(index)
+	// x := 0
+	// for x < 5 {
+	// 	fmt.Println("the value of x is :", x)
+	// 	x++
+	// }
+	// for i := 0; i < 5; i++ {
+	// 	println("the value of i is :", i)
+	// }
+	names := []string{"mario", "lugi", "youshi", "peach"}
+	for _, value := range names {
+		fmt.Printf("value : %v \n", value)
+		value = "new string"
+	}
+	fmt.Println(names)
 }
