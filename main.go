@@ -42,4 +42,21 @@ func main() {
 	//Sprintf (save formatted strings)
 	formattedString := fmt.Sprintf("nameOne:%s , nameTwo:%q\n", nameOne, nameTwo)
 	print(formattedString)
+
+	var ages [3]int = [3]int{20, 30, 40} //Array of integers fix length
+	var ages2 = [3]int{20, 30, 40}
+	names := [4]string{"Oussama", "Yassine", "Amine", "Imane"} //Array of strings fix length
+
+	//slices (dynamic arrays)
+	var scores = []int{100, 200, 300, 400, 500}
+
+	scores = append(scores, 500) //Adding an element to the slice
+	scores[2] = 25
+
+	fmt.Println(len(ages), ages2, names, len(scores))
+
+	//slices ranges
+	rangeOne := scores[:3] // [200, 300]
+	fmt.Print(rangeOne)
+
 }
