@@ -79,10 +79,34 @@ func main() {
 	// for i := 0; i < 5; i++ {
 	// 	println("the value of i is :", i)
 	// }
+	// names := []string{"mario", "lugi", "youshi", "peach"}
+	// for _, value := range names {
+	// 	fmt.Printf("value : %v \n", value)
+	// 	value = "new string"
+	// }
+	// fmt.Println(names)
+	// age := 45
+
+	// if age < 40 {
+	// 	fmt.Println("age is less the 40")
+	// } else if age == 40 {
+	// 	fmt.Println("not")
+
+	// } else {
+	// 	fmt.Println("age")
+	// }
 	names := []string{"mario", "lugi", "youshi", "peach"}
-	for _, value := range names {
-		fmt.Printf("value : %v \n", value)
-		value = "new string"
+
+	for index, value := range names {
+		if index == 1 {
+			fmt.Println("continuing in pos", index)
+			continue //
+		}
+		if index > 2 {
+			fmt.Println("breaking at pos", index)
+			break
+		}
+		fmt.Printf("the value at pos %v is %v \n", index, value)
 	}
-	fmt.Println(names)
+
 }
