@@ -34,4 +34,12 @@ func main() {
 	var scoreOne float32 = 25.98 // 32 bits for floating point numbers
 	var scoreTwo float64 = 25.98 // 64 bits for floating point numbers
 	fmt.Println(scoreOne, scoreTwo)
+
+	//fmt package
+	fmt.Printf("ageFour: %v, ScoreTwo: %f\n", ageFour, scoreTwo)
+	fmt.Printf("nameOne:%s , nameTwo:%q\n", nameOne, nameTwo)
+	fmt.Printf(("The type of nameOne is %T\n"), nameOne)
+	//Sprintf (save formatted strings)
+	formattedString := fmt.Sprintf("nameOne:%s , nameTwo:%q\n", nameOne, nameTwo)
+	print(formattedString)
 }
