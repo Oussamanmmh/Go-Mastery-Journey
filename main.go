@@ -20,6 +20,24 @@ func main() {
 	// myFunction(name)
 	// fmt.Println("the name now:", name)
 	// fmt.Println("the area :", circleArea(4))
-	Greeting()
-	displayScore()
+	// Greeting()
+	// displayScore()
+	//maps
+	menu := map[string]float64{
+		"soup":   4.99,
+		"pie":    7.99,
+		"salad":  6.99,
+		"coffee": 1.99,
+	}
+
+	fmt.Println(menu)
+	fmt.Println(menu["pie"])
+	//looping through maps
+	for k, v := range menu {
+		fmt.Println(k, "-", v)
+	}
+
+	//deleting from maps
+	delete(menu, "pie")
+	fmt.Println(menu)
 }
