@@ -1,8 +1,13 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"math"
+	"os"
+	"reflect"
+	"strconv"
+	"strings"
 )
 
 func myFunction(n string) {
@@ -43,6 +48,20 @@ func main() {
 	//replace value
 	menu["coffee"] = 2.99
 
-	student1.displayInfo()
+	// student1.displayInfo()
+
+	reader := bufio.NewReader(os.Stdin)
+	fmt.Print("Enter your age:")
+	age, _ := reader.ReadString('\n')
+	age = strings.TrimSpace(age) // Trim the newline characters
+	p, err := strconv.ParseFloat(age, 64)
+	if err != nil {
+		fmt.Println(err)
+		fmt.Println("Please enter a valid number")
+	}
+	fmt.Print("the age ", p)
+	//age = strings.TrimSpace(age)
+
+	fmt.Print("the age ", reflect.TypeOf(p))
 
 }

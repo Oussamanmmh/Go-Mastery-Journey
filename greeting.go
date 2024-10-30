@@ -18,6 +18,7 @@ var student1 = student{
 //reciever function
 //this function is associated with the student object
 func (s student) displayInfo() {
+
 	fmt.Printf("the student name is %s and he is %d years old and he is studying at %s\n", s.name, s.age, s.college)
 }
 
