@@ -40,4 +40,9 @@ func main() {
 	//deleting from maps
 	delete(menu, "pie")
 	fmt.Println(menu)
+	//replace value
+	menu["coffee"] = 2.99
+
+	student1.displayInfo()
+
 }
